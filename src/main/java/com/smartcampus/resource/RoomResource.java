@@ -41,7 +41,7 @@ public class RoomResource {
     @POST
     public Response createRoom(Room room) {
         if (room == null) {
-            return Response.status(500)
+            return Response.status(400)
                     .entity(error("Bad Request", "Request body must not be empty."))
                     .build();
         }
